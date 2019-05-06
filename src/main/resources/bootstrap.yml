@@ -16,7 +16,7 @@ spring:
      database-platform: org.hibernate.dialect.PostgreSQLDialect
      database: POSTGRESQL
      show-sql: true
-     #hibernate.ddl-auto: update
+     hibernate.ddl-auto: update
      properties:
       hibernate.id.new_generator_mappings: true
       hibernate.cache.use_second_level_cache: false
@@ -37,6 +37,7 @@ spring:
               starttls.enable: true
 
 server:
-    port: 8080
+    port: 8090
+    context-path: /api/feeder
   
        

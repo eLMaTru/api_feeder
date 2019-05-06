@@ -19,10 +19,10 @@ public class ApiResponseDto implements Serializable{
 	private static final long serialVersionUID = -1984763249441316964L;
 
 	/** The data. */
-	private transient List<? extends DataDto> data = new ArrayList<>();
+	private transient List<? extends DataDto> data = new ArrayList<DataDto>();
 	
 	/** The errors. */
-	private transient List<ErrorDto<?>> errors  = new ArrayList<>();
+	private transient List<ErrorDto<?>> errors  = new ArrayList<ErrorDto<?>>();
 	
 	/**
 	 * Instantiates a new ApiResponseDto.

@@ -81,7 +81,7 @@ public class RestResponseEntityExceptionHandler {
 
 		for (FieldError fieldError : (exception).getBindingResult().getFieldErrors()) {
 
-			ErrorDto<String> error = new ErrorDto<>(HttpStatus.BAD_REQUEST.name(),
+			ErrorDto<String> error = new ErrorDto<String>(HttpStatus.BAD_REQUEST.name(),
 					String.valueOf(HttpStatus.BAD_REQUEST.value()), "Invalid method argument",
 					"Invalid method argument (" + fieldError.getField() + ") with value ("
 							+ fieldError.getRejectedValue() + "), " + fieldError.getDefaultMessage(),
@@ -109,7 +109,7 @@ public class RestResponseEntityExceptionHandler {
 		ApiResponseDto response = new ApiResponseDto();
 		HttpStatus responseStatus = HttpStatus.BAD_REQUEST;
 
-		ErrorDto<String> error = new ErrorDto<>(HttpStatus.BAD_REQUEST.name(),
+		ErrorDto<String> error = new ErrorDto<String>(HttpStatus.BAD_REQUEST.name(),
 				String.valueOf(HttpStatus.BAD_REQUEST.value()), "Message not readable",
 				exception.getClass().getName() + " " + exception.getMessage(), request.getDescription(false));
 
@@ -137,7 +137,7 @@ public class RestResponseEntityExceptionHandler {
 		ApiResponseDto response = new ApiResponseDto();
 		HttpStatus responseStatus = HttpStatus.METHOD_NOT_ALLOWED;
 
-		ErrorDto<String> error = new ErrorDto<>(responseStatus.name(), responseStatus.toString(), "Method not allowed",
+		ErrorDto<String> error = new ErrorDto<String>(responseStatus.name(), responseStatus.toString(), "Method not allowed",
 				exception.getMessage(), request.getDescription(false));
 		response.addError(error);
 

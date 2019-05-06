@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.hht.api.feeder.utils;
+package com.hht.api.feeder.constants;
 
 /**
  * This class provide Constants api endpoints 
@@ -16,4 +16,5 @@ public class Endpoint {
 	 * Endpoint to user
 	 * */
   public static final String  ENDPOINT_USER = "/users/{userId}";
+  public static final String  ENDPOINT_USER_POST = "/users";
 }
