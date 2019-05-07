@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.hht.api.feeder.utils;
 
 import java.io.StringReader;
