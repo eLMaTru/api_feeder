@@ -39,6 +39,7 @@ import com.hht.api.feeder.utils.ResponseWrapper;
  * This class handles the application flow. It takes the HTTP requests and
  * resolve them using the corresponding service.
  * <p>
+ * 
  * Copyright 2019 Horizon High Tech, Inc. All Rights Reserved.
  *
  * @author Jorge De Los Santos
