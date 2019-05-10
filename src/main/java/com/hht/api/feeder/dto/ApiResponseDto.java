@@ -19,10 +19,10 @@ public class ApiResponseDto implements Serializable{
 	private static final long serialVersionUID = -1984763249441316964L;
 
 	/** The data. */
-	private transient List<? extends DataDto> data = new ArrayList<DataDto>();
+	private transient List<? extends DataDto> data = new ArrayList<>();
 	
 	/** The errors. */
-	private transient List<ErrorDto<?>> errors  = new ArrayList<ErrorDto<?>>();
+	private transient List<Object> errors  = new ArrayList<>();
 	
 	/**
 	 * Instantiates a new ApiResponseDto.
@@ -73,17 +73,17 @@ public class ApiResponseDto implements Serializable{
 	 *
 	 * @return the errors
 	 */
-	public List<ErrorDto<?>> getErrors() {
+	public List<Object> getErrors() {
 		return errors;
 	}
 
 	/**
 	 * Sets the errors.
 	 *
-	 * @param errors the new errors
+	 * @param list the new errors
 	 */
-	public void setErrors(List<ErrorDto<?>> errors) {
-		this.errors = errors;
+	public void setErrors(List<Object> list) {
+		this.errors = list;
 	}
 	
 	/**

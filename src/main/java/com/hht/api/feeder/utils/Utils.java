@@ -67,7 +67,7 @@ public class Utils {
 	 * @param resource, the resource
 	 * @return <T> List<ErrorDto>
 	 */
-	public static <T> List<ErrorDto<?>> getErrorsFromConstraintViolations(
+	public static <T> List<Object> getErrorsFromConstraintViolations(
 			Set<ConstraintViolation<?>> constraintViolations, String resource) {
 		Utils.resource = resource;
 
