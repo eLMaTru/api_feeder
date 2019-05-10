@@ -115,6 +115,7 @@ public class Utils {
 	 * @param fieldName, the field name
 	 * @return String
 	 */
+	@SuppressWarnings("rawtypes")
 	public static String getNameFromJsonProperty(Class object, String fieldName) {
 		String name = fieldName;
 		try {

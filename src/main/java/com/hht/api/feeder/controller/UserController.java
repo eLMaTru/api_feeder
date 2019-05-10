@@ -51,6 +51,7 @@ import com.hht.api.feeder.utils.ResponseWrapper;
 @RequestScope
 @RestController
 @RequestMapping("v1")
+@Validated
 public class UserController {
 	/**
 	 * This is the constant logger.
@@ -71,7 +72,7 @@ public class UserController {
 			@Pattern(regexp = ValidationPattern.UUID_PATTERN, message = " Invalid user ID format") @PathVariable("userId") String userId) {
 
 		final String ENDPOINT = Endpoint.ENDPOINT_USER.replace("{userId}", userId);
-		LOGGER.info("Excecuting endpoint: ".concat(ENDPOINT));
+		LOGGER.info("Excecuting endpoint: {}", ENDPOINT);
 
 		HttpStatus status = HttpStatus.OK;
 		ApiResponseDto response = new ApiResponseDto();
@@ -110,7 +111,7 @@ public class UserController {
 	public ResponseEntity<ApiResponseDto> saveUser(@Validated @RequestBody UserDto request) {
 
 		final String ENDPOINT = Endpoint.ENDPOINT_USER;
-		LOGGER.info("Excecuting endpoint: ".concat(ENDPOINT).concat(" with request: ").concat(request.toString()));
+		LOGGER.info("Executing endpoint: {}  with request: {}", ENDPOINT, request.toString());
 
 		HttpStatus status = HttpStatus.CREATED;
 

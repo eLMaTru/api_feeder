@@ -53,7 +53,7 @@ public class ResponseWrapper<T> extends DataDto {
      * @return ResponseWrapper
      * */
     public static <T>ResponseWrapper<T> of() {
-        return new ResponseWrapper<>();
+        return new ResponseWrapper<T>();
     }
 
     /**
