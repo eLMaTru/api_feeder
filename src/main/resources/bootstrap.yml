@@ -1,0 +1,43 @@
+spring:
+  application:
+   name: api.feeder
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  datasource:
+     url: jdbc:postgresql://localhost:5432/feeder
+     username: postgres
+     password: postgres
+  jackson:
+     serialization:
+      indent-output: true
+  jpa:
+     database-platform: org.hibernate.dialect.PostgreSQLDialect
+     database: POSTGRESQL
+     show-sql: true
+     hibernate.ddl-auto: update
+     properties:
+      hibernate.id.new_generator_mappings: true
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_query_cache: false
+      hibernate.generate_statistics: true
+      hibernate.search.default.directory_provider: filesystem
+      hibernate.format_sql: true
+      hibernate.default_schema: feeder     
+  mail:
+      host: smtp.gmail.com
+      port: 587
+      username: springmvcemailtest@gmail.com
+      password: springframework430  
+      properties:
+       mail:
+        smtp:        
+              auth: true
+              starttls.enable: true
+
+server:
+    port: 8090
+    context-path: /api/feeder
+  
+       
